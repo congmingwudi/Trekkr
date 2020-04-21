@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Assigned_Tasks</fullName>
+    <columns>NAME</columns>
+    <columns>Task__c</columns>
+    <columns>Assign_To__c</columns>
+    <columns>Status__c</columns>
+    <columns>Target_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Task__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All Assigned Tasks</label>
+</ListView>

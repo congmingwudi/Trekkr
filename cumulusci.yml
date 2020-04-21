@@ -1,0 +1,19 @@
+minimum_cumulusci_version: '3.10.0'
+project:
+    name: Trekkr
+    package:
+        name:  Trekkr
+        api_version: '48.0'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Trekkr/tests
+            options:
+                outputdir: robot/Trekkr/results
+
+    robot_testdoc:
+        options:
+            path: robot/Trekkr/tests
+            output: robot/Trekkr/doc/Trekkr_tests.html
