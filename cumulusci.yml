@@ -17,3 +17,13 @@ tasks:
         options:
             path: robot/Trekkr/tests
             output: robot/Trekkr/doc/Trekkr_tests.html
+
+flows:
+    config_qa:
+        steps:
+            3:
+                task: load_dataset
+    config_dev:
+        steps:
+            3:
+                task: load_dataset

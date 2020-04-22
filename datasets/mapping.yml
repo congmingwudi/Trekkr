@@ -1,45 +1,109 @@
-Insert Accounts:
-  sf_object: Account
-  table: Account
+Insert First_Aid__c:
+  sf_object: First_Aid__c
+  table: First_Aid__c
   fields:
+    Id: sf_id
+    First_Aid_Description__c: First_Aid_Description__c
+    Response__c: Response__c
+Insert User_Role__c:
+  sf_object: User_Role__c
+  table: User_Role__c
+  fields:
+    Id: sf_id
     Name: Name
-    Description: Description
-    BillingStreet: BillingStreet
-    BillingCity: BillingCity
-    BillingState: BillingState
-    BillingPostalCode: BillingPostalCode
-    BillingCountry: BillingCountry
-    ShippingStreet: ShippingStreet
-    ShippingCity: ShippingCity
-    ShippingState: ShippingState
-    ShippingPostalCode: ShippingPostalCode
-    ShippingCountry: ShippingCountry
-    Phone: Phone
-    Fax: Fax
-    Website: Website
-    NumberOfEmployees: NumberOfEmployees
-    AccountNumber: AccountNumber
-    Site: Site
-    Type: Type
-Insert Contacts:
-  sf_object: Contact
-  table: Contact
+Insert On_boarding_Task__c:
+  sf_object: On_boarding_Task__c
+  table: On_boarding_Task__c
   fields:
-    Salutation: Salutation
-    FirstName: FirstName
-    LastName: LastName
-    Email: Email
-    Phone: Phone
-    MobilePhone: MobilePhone
-    OtherPhone: OtherPhone
-    HomePhone: HomePhone
-    Title: Title
-    Birthdate: Birthdate
-    MailingStreet: MailingStreet
-    MailingCity: MailingCity
-    MailingState: MailingState
-    MailingPostalCode: MailingPostalCode
-    MailingCountry: MailingCountry
+    Id: sf_id
+    Name: Name
+    Auto_Assign_del__c: Auto_Assign_del__c
+    Description__c: Description__c
+    Duration_Type__c: Duration_Type__c
+    Duration__c: Duration__c
+    Flow_Name__c: Flow_Name__c
+    Level__c: Level__c
+    Link__c: Link__c
+    Mandatory__c: Mandatory__c
+    Quantifiable__c: Quantifiable__c
+    RecordTypeId: RecordTypeId
+    Step_Type__c: Step_Type__c
+    Target_Value__c: Target_Value__c
+Insert Onboarding_Program__c:
+  sf_object: Onboarding_Program__c
+  table: Onboarding_Program__c
+  fields:
+    Id: sf_id
+    Name: Name
+    Description__c: Description__c
+    Duration_Type__c: Duration_Type__c
+    Duration__c: Duration__c
+    Public__c: Public__c
+Insert Onboarding_Task_User_Role_Junction__c:
+  sf_object: Onboarding_Task_User_Role_Junction__c
+  table: Onboarding_Task_User_Role_Junction__c
+  fields: {}
   lookups:
-    AccountId:
-      table: accounts
+    Onboarding_Task__c:
+      table: On_boarding_Task__c
+    User_Role__c:
+      table: User_Role__c
+Insert Onboarding_Program_User_Role_Junction__c:
+  sf_object: Onboarding_Program_User_Role_Junction__c
+  table: Onboarding_Program_User_Role_Junction__c
+  fields: {}
+  lookups:
+    Onboarding_Program__c:
+      table: Onboarding_Program__c
+    User_Role__c:
+      table: User_Role__c
+Insert Onboarding_Program_Task_Junction__c:
+  sf_object: Onboarding_Program_Task_Junction__c
+  table: Onboarding_Program_Task_Junction__c
+  fields: {}
+  lookups:
+    Onboarding_Program__c:
+      table: Onboarding_Program__c
+    Onboarding_Task__c:
+      table: On_boarding_Task__c
+Insert User_User_Role_Junction__c:
+  sf_object: User_User_Role_Junction__c
+  table: User_User_Role_Junction__c
+  fields: {}
+  lookups:
+    User_Role__c:
+      table: User_Role__c
+Insert Assigned_Task__c:
+  sf_object: Assigned_Task__c
+  table: Assigned_Task__c
+  fields:
+    Id: sf_id
+    Current_Value__c: Current_Value__c
+    Energizers__c: Energizers__c
+    Feedback__c: Feedback__c
+    Medals__c: Medals__c
+    Milestone__c: Milestone__c
+    Percentage_Completed__c: Percentage_Completed__c
+    Reason_for_Reopen__c: Reason_for_Reopen__c
+    Status__c: Status__c
+    Target_Date_Time__c: Target_Date_Time__c
+    Type__c: Type__c
+  lookups:
+    Onboarding_Program__c:
+      table: Onboarding_Program__c
+    Parent_Assigned_Task__c:
+      table: Assigned_Task__c
+      after: Insert Assigned_Task__c
+    Task__c:
+      table: On_boarding_Task__c
+Insert Assigned_Task_Contribution__c:
+  sf_object: Assigned_Task_Contribution__c
+  table: Assigned_Task_Contribution__c
+  fields:
+    Id: sf_id
+    Comments__c: Comments__c
+    Contributed_Value__c: Contributed_Value__c
+    Date__c: Date__c
+  lookups:
+    Assigned_Task_Program__c:
+      table: Assigned_Task__c
