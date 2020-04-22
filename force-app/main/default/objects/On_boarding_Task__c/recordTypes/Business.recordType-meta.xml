@@ -37,4 +37,15 @@
             <default>false</default>
         </values>
     </picklistValues>
+    <picklistValues>
+        <picklist>Step_Type__c</picklist>
+        <values>
+            <fullName>Flow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Link</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
 </RecordType>
