@@ -1,0 +1,6 @@
+<design:component>
+	<design:attribute name="buttonLabel" label="Button Label" />
+    <design:attribute name="flowToLaunch" label="Flow to launch" description="API Name of the Flow"/>
+    <design:attribute name="showFlowInModal" label="Show flow in modal dialog" />
+    <design:attribute name="buttonFlowAction" label="Button Flow Action" description="NEXT, BACK, PAUSE, RESUME, FINISH" />    
+</design:component>

@@ -107,7 +107,9 @@ public with sharing class MentorProfileCntr {
         fields_OT.add('Name');
         fields_OT.add('Description__c');
         fields_OT.add('Target_Value__c');
+        fields_OT.add('Step_Type__c');
         fields_OT.add('Link__c');
+        fields_OT.add('Flow_Name__c');
         if(FLSCheck.isAccessible(fields_AT,'Assigned_Task__c') && FLSCheck.isAccessible(fields_OP,'Onboarding_Program__c') &&
            FLSCheck.isAccessible(fields_OT,'On_boarding_Task__c')){
                assignedPrograms = [SELECT Id,Energizers__c,Feedback__c,Medals__c,
@@ -120,7 +122,7 @@ public with sharing class MentorProfileCntr {
                                     Current_Value__c,Milestone__c,Task__r.Name,
                                     Task__r.Description__c,Task__r.Target_Value__c, 
                                     Overdue__c,Status__c,Target_Date_Time__c,Task__r.Quantifiable__c, 
-                                    Task__r.Link__c 
+                                    Task__r.Step_Type__c, Task__r.Link__c, Task__r.Flow_Name__c
                                     FROM Child_Assigned_Tasks__r WHERE Task__r.RecordTypeId = :businessTaskRecordTypeId)
                                    FROM Assigned_Task__c 
                                    WHERE Assign_To__c  = :userId AND Onboarding_Program__c != null 

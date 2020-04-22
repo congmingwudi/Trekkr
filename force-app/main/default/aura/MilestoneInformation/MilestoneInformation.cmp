@@ -213,10 +213,23 @@
                                                     <lightning:layout>
                                                         <lightning:layoutItem flexibility="auto" padding="around-small" class="custom-box">
                                                             <div class="slds-text-body_regular">{!assignedChildTask.Task__r.Description__c}</div>
-                                                            <lightning:layoutItem flexibility="auto,no-grow" padding="around-small" class="noLeftPadding">
-                                                                <aura:if isTrue="{!assignedChildTask.Task__r.Link__c != null}">
-                                                                    <a href="{!assignedChildTask.Task__r.Link__c}" target="_blank">Click here to begin step</a>
+                                                            <lightning:layoutItem flexibility="auto" padding="around-small" class="noLeftPadding">
+                                                                <aura:if isTrue="{!assignedChildTask.Task__r.Step_Type__c == 'Link'}">
+                                                                    <aura:if isTrue="{!assignedChildTask.Task__r.Link__c != null}">
+                                                                        <a href="{!assignedChildTask.Task__r.Link__c}" target="_blank">Click here to begin step</a>
+                                                                    </aura:if> 
                                                                 </aura:if> 
+                                                                
+                                                                <aura:if isTrue="{!assignedChildTask.Task__r.Step_Type__c == 'Flow'}">
+                                                                    <aura:if isTrue="{!assignedChildTask.Task__r.Flow_Name__c != null}">
+                                                                        
+                                                                        <c:RC_FlowButton buttonLabel="Click here to complete step" 
+                                                                            flowToLaunch="{!assignedChildTask.Task__r.Flow_Name__c}"
+                                                                            showFlowInModal="true"
+                                                                        />
+                                                                    </aura:if> 
+                                                                </aura:if> 
+                                                                
                                                             </lightning:layoutItem>
                                                             <lightning:layout>
                                                                 <lightning:layoutItem flexibility="auto,no-grow" padding="around-small" class="slds-border_right noLeftPadding">
