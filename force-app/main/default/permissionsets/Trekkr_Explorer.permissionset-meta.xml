@@ -285,6 +285,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>On_boarding_Task__c.Flow_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>On_boarding_Task__c.Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -306,6 +311,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>On_boarding_Task__c.Record_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>On_boarding_Task__c.Step_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -362,16 +372,6 @@
         <editable>false</editable>
         <field>Onboarding_Task_User_Role_Junction__c.User_Role__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>User.Check_Manager__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>User.Check_Mentor__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>

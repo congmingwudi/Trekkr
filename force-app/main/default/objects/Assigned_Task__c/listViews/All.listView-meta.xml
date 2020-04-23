@@ -10,10 +10,5 @@
     <columns>Onboarding_Program__c</columns>
     <columns>Overdue__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>Assign_To__c</field>
-        <operation>equals</operation>
-        <value>Apurva Birala</value>
-    </filters>
     <label>All</label>
 </ListView>

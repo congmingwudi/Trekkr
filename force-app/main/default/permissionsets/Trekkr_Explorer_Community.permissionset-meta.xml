@@ -285,6 +285,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>On_boarding_Task__c.Flow_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>On_boarding_Task__c.Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -306,6 +311,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>On_boarding_Task__c.Record_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>On_boarding_Task__c.Step_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
