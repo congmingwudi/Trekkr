@@ -337,11 +337,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>JigsawImportLimitOverride</field>
-            <table>User</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ChatterAdoptionStage</field>
             <table>User</table>
         </columns>

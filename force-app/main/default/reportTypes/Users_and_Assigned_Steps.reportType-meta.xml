@@ -92,11 +92,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>JigsawImportLimitOverride</field>
-            <table>User</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>DefaultGroupNotificationFrequency</field>
             <table>User</table>
         </columns>
