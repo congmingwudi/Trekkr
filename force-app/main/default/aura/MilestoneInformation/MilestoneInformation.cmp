@@ -137,7 +137,7 @@
             </aura:if>
             <div class="{!v.isNotification == false ? (v.showSideView?'slds-col slds-size_2-of-3':'') : 'slds-col slds-size_3-of-3'}" style="{!v.showSideView?'':'width:100%;'}" data-step="2" data-intro="This is a tooltip!">
                 <aura:if isTrue="{!v.selectedProgram.Onboarding_Program__r.Name != null}">
-                    <div id="main" class="slds-vertical-tabs__content slds-show" role="tabpanel" aria-labelledby="slds-vertical-tabs-0__nav" style="text-align:left;">
+                    <div id="main" class="slds-vertical-tabs__content slds-show slds-scrollable_y" role="tabpanel" aria-labelledby="slds-vertical-tabs-0__nav" style="text-align:left; height:2000px;">
                         <article class="slds-card" style="border: 1px solid rgb(221, 219, 218) !important;">
                             <lightning:layout class="programDetailLayout">
                                 <lightning:layoutItem flexibility="no-flex" padding="around-small" >
